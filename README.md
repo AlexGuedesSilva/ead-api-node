@@ -18,6 +18,7 @@ API RESTful de uma **plataforma EAD** feita com **Node.js + Express + MySQL**, s
 * **src/models** → Modelos Sequelize/MySQL
 * **src/controllers** → Controle de requisições
 * **src/services** → Regras de negócio
+* **src/repositories** → Acesso ao database
 * **src/routes** → Definição de rotas
 * **src/middlewares** → Middlewares de validação e autenticação
 

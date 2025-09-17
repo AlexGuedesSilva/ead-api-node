@@ -161,21 +161,21 @@ curl -X POST http://localhost:3000/api/users/login \
 npm install express mysql2 sequelize dotenv bcrypt jsonwebtoken express-validator cors
 
 
-- express → framework web para criar rotas e middlewares
+* **express** → framework web para criar rotas e middlewares
 
-- mysql2 → driver para conectar ao MySQL
+* **mysql2** → driver para conectar ao MySQL
 
-- sequelize → ORM (facilita consultas e manipulação de dados)
+* **sequelize** → ORM (facilita consultas e manipulação de dados)
 
-- dotenv → gerenciar variáveis de ambiente
+* **dotenv** → gerenciar variáveis de ambiente
 
-- bcrypt → hash de senhas de usuários
+* **bcrypt** → hash de senhas de usuários
 
-- jsonwebtoken → autenticação JWT
+* **jsonwebtoken** → autenticação JWT
 
-- express-validator → validação de dados de entrada
+* **express-validator** → validação de dados de entrada
 
-- cors → habilitar acesso da API a partir de outras origens (ex: frontend React, Angular)
+* **cors** → habilitar acesso da API a partir de outras origens (ex: frontend React, Angular)
 
 ---
 
@@ -183,16 +183,16 @@ npm install express mysql2 sequelize dotenv bcrypt jsonwebtoken express-validato
 
 Se quiser turbinar ainda mais:
 
-- npm install morgan helmet
+* **npm install** morgan helmet
 
-- morgan → logs de requisições HTTP (útil para debug)
+* **morgan** → logs de requisições HTTP (útil para debug)
 
-- helmet → segurança extra nos headers HTTP
+* **helmet** → segurança extra nos headers HTTP
 
 ---
 
 ## ✅ Boas Práticas Utilizadas
-- Arquitetura MVC + Services
+- Arquitetura MVC + Services + Repositories
 - Separação de responsabilidades
 - Validação de dados (Joi ou express-validator)
 - JWT para autenticação
