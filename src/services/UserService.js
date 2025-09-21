@@ -15,7 +15,10 @@ class UserService {
     const match = await bcrypt.compare(password, user.password);
     if (!match) throw new Error("Senha inválida.");
 
-    const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN });
+    const token = jwt.sign(
+      { id: user.id, role: user.role },              // payload
+      process.env.JWT_SECRET,                        // secret key
+      { expiresIn: process.env.JWT_EXPIRES_IN });    // options, including expiration
     return { user, token };
   }
 
