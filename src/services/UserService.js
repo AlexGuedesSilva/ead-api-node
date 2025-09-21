@@ -1,10 +1,12 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const UserRepository = require("../repositories/UserRepository");
+const { hashPassword, comparePassword } = require('../utils/password');
+const saltRounds = 12;
 
 class UserService {
   async register(data) {
-    data.password = await bcrypt.hash(data.password, 10);
+    data.password = await hashPassword(data.password, saltRounds);
     return await UserRepository.create(data);
   }
 
@@ -12,7 +14,7 @@ class UserService {
     const user = await UserRepository.findByEmail(email);
     if (!user) throw new Error("Usuário não encontrado.");
 
-    const match = await bcrypt.compare(password, user.password);
+    const match = await comparePassword(password, user.password);
     if (!match) throw new Error("Senha inválida.");
 
     const token = jwt.sign(
