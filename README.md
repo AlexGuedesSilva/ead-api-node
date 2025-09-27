@@ -3,6 +3,7 @@
 ## 📌 Sobre o Projeto
 
 API RESTful de uma **plataforma EAD** feita com **Node.js + Express + MySQL**, seguindo boas práticas de organização em pacotes.
+http://localhost:3000/api-docs/ url para acesso da documentação SWAGGER
 
 ## 🚀 Funcionalidades
 
